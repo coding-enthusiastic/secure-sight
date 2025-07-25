@@ -51,7 +51,7 @@ npm start
 
 ---
 
-## ⚙️ Tech Decisions
+##  Tech Decisions
 
 + Next.js (App Router)
 + Prisma + SQLite
