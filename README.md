@@ -62,6 +62,7 @@ npm start
 
 ##  If I Had More Time…
 
+* Make it responsive with mobile first approach
 * Add authentication 
 * Dashboard analytics
 * Alert system 
