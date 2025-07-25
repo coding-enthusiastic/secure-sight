@@ -68,6 +68,16 @@ npm start
 * Deploy on Vercel 
 * Add tests
 
+--- 
+
+## Extra Notes
+
+- This project isn't finished yet. I haven't connected the DB to the frontend since time was very short. The project currently only has placeholders and duplicates the given UI for the assessment.
+
+- I started learning Next.js and Prisma after getting the project. So I had to spend 3 days to learn the basics of them and spend 2 days to build it as it is now.
+
+- Faced some challenges and spent more time on it to rectify the mistakes
+
 ---
 
 ## Project Structure

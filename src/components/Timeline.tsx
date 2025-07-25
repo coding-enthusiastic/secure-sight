@@ -14,7 +14,6 @@ const Timeline = () => {
   return (
     <div className="flex items-center justify-center h-[298px]">
       Timeline
-      <p>{JSON.stringify(data, null, 3)}</p>
     </div>
   );
 };
