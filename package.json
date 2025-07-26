@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prisma-generate": "npx prisma generate --schema=src/prisma/schema.prisma",
-    "prisma-migrate": "npx prisma migrate dev --name init --schema=src/prisma/schema.prisma"
+    "prisma-migrate": "npx prisma migrate dev --name init --schema=src/prisma/schema.prisma",
+    "prisma-push": "npx prisma db push --schema=src/prisma/schema.prisma"
   },
   "prisma": {
     "seed": "node src/prisma/seed.js"

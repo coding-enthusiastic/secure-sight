@@ -7,5 +7,5 @@ export async function GET() {
     include: { incidents: true },
   });
 
-  return NextResponse.json({ message: data });
+  return NextResponse.json(data);
 }
