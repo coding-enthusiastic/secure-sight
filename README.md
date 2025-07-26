@@ -9,9 +9,9 @@ A modern surveillance dashboard built with Next.js, Prisma, and Tailwind CSS. It
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/secure-sight-dashboard.git
+git clone https://github.com/coding-enthusiastic/secure-sight
 
-cd secure-sight-dashboard
+cd secure-sight
 ```
 
 ### 2. Install Dependencies
