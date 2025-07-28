@@ -1,4 +1,5 @@
 type Incidents = {
+  id? : number,
   type: string;
   tsStart: Date;
   tsEnd: Date;

@@ -1,4 +1,3 @@
-import React from "react";
 import CameraList from "./List/CameraList";
 import ListNavbar from "./List/ListNavbar";
 import { Data } from "@/interface/types";
@@ -11,19 +10,22 @@ const IncidentList = async () => {
   const dbData: Data = getData.ok ? await getData.json() : null;
 
   const parsedData = dbData ? Object.values(dbData) : null;
-  const data : Data = parsedData
+  const data: Data = parsedData
     ? parsedData.length > 0
       ? dbData
       : sampleData
     : sampleData;
 
-  const dbInput = dbData?.map((e) => e.incidents.length);
-  const sampleInput = sampleData?.map((e) => e.incidents.length);
-  const total = dbInput ? dbInput[0] : sampleInput[0];
+  let count = 0;
+
+  const dbInput = dbData ? dbData : sampleData;
+  dbInput.map((e) =>
+    e.incidents.map((f) => (f.resolved === false ? count++ : ""))
+  );
 
   return (
     <div className="w-[572px]">
-      <ListNavbar totalData={total} />
+      <ListNavbar total={count} />
 
       <CameraList {...data} />
     </div>
