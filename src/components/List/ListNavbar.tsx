@@ -6,7 +6,7 @@ import {
   UserSearch,
 } from "lucide-react";
 
-const ListNavbar = () => {
+const ListNavbar = ({ totalData }: { totalData: number | null }) => {
   return (
     <div className="flex flex-row items-center gap-[4px] w-full p-4">
       <div className="h-fit">
@@ -14,9 +14,10 @@ const ListNavbar = () => {
           <AlertTriangle width={12} height={12} color="#F87171" />
         </div>
       </div>
+
       <div className="flex flex-row justify-between gap-[6px] w-full">
         <h1 className="font-jakarta-sans font-semibold text-[18px]">
-          15 Unresolved Incidents
+          <span>{totalData}</span> Unresolved Incidents
         </h1>
         <div className="flex flex-row items-center gap-[3px]">
           <div className="flex flex-row gap-[-3px]">

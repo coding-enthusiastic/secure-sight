@@ -1,11 +1,9 @@
 import { Data } from "@/interface/types";
 import { ChevronRight, Clock } from "lucide-react";
 import Image from "next/image";
-import { sampleData } from "./SampleData";
 
 const CameraList = async (props: Data) => {
-  const dbData = Object.values(props);
-  const data = dbData.length > 0 ? dbData : sampleData;
+  const data = Object.values(props);
 
   function dateTime(a: Date, b: Date) {
     const tS = new Date(a);
