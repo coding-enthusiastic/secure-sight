@@ -12,7 +12,6 @@ const IncidentPlayer = () => {
         fill
         quality={100}
         alt="Camera screen"
-        priority
         style={{ objectFit: "cover" }}
       />
       <div
@@ -33,7 +32,7 @@ const IncidentPlayer = () => {
 
         <p className="font-inter text-[14px] font-medium">Camera - 01</p>
       </div>
-      
+
       <CameraViews />
     </div>
   );

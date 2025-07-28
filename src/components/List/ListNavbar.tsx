@@ -21,7 +21,12 @@ const ListNavbar = () => {
         <div className="flex flex-row items-center gap-[3px]">
           <div className="flex flex-row gap-[-3px]">
             <div className="flex justify-center items-center w-[20px] h-[20px] bg-[#431407] rounded-[16px]">
-              <DoorOpen width={12} height={12} color="#F97316" className="-scale-x-100"/>
+              <DoorOpen
+                width={12}
+                height={12}
+                color="#F97316"
+                className="-scale-x-100"
+              />
             </div>
             <div className="flex justify-center items-center w-[20px] h-[20px] bg-[#450A0A] rounded-[16px]">
               <Plus width={12} height={12} color="#EF4444" />

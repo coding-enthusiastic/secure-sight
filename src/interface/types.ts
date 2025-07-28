@@ -1,5 +1,3 @@
-// DB data
-
 export type Data = [
   {
     name: string;

@@ -16,7 +16,7 @@ const User = () => {
           ajhas@mandlac.com
         </p>
       </div>
-      <ChevronDown width={16} height={16}/>
+      <ChevronDown width={16} height={16} />
     </div>
   );
 };

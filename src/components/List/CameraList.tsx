@@ -3,38 +3,36 @@ import { ChevronRight, Clock } from "lucide-react";
 import Image from "next/image";
 import { sampleData } from "./SampleData";
 
-const CameraList = async () => {
-  const getData = await fetch(`${process.env.API_URL}/api/incidents`, {
-    cache: "no-store",
-  });
-  const dbData: Data = getData.ok ? await getData.json() : null;
-
-  const data = dbData ? dbData : sampleData;
+const CameraList = async (props: Data) => {
+  const dbData = Object.values(props);
+  const data = dbData.length > 0 ? dbData : sampleData;
 
   function dateTime(a: Date, b: Date) {
-    console.log(a, b);
+    const tS = new Date(a);
+    const tE = new Date(b);
+
     const timeStart = new Intl.DateTimeFormat("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
       hour12: false,
-    }).format(a);
+    }).format(tS);
 
     const timeEnd = new Intl.DateTimeFormat("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
       hour12: false,
-    }).format(b);
+    }).format(tE);
 
     const dateStart = new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",
       month: "short",
       year: "numeric",
-    }).format(a);
+    }).format(tS);
     const dateEnd = new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",
       month: "short",
       year: "numeric",
-    }).format(b);
+    }).format(tE);
 
     return (
       <div>
@@ -49,7 +47,7 @@ const CameraList = async () => {
 
   return (
     <div className="w-full px-[12px] pb-[24px] gap-4">
-      {sampleData.map((item, index) => (
+      {data.map((item, index) => (
         <div key={index}>
           {item.incidents.map((e, index) => (
             <div key={index} className="flex py-1 pr-[12px] pl-1 gap-4 w-full">

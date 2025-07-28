@@ -5,6 +5,10 @@
 /.next/
 /out/
 
+# db files
+src/prisma/db/
+src/prisma/migrations/
+
 # production
 /build
 
