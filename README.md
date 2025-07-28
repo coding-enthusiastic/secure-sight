@@ -28,10 +28,20 @@ Create a `.env` file in the root and define the database URL:
 DATABASE_URL="file:./db/dev.db"
 ```
 
++ If you want to store the data in memory:
+
+```env
+DATABASE_URL="file:db/dev.db?mode=memory&cache=shared"
+```
+
 Run migrations and seed data:
 
 ```bash
+# If you want to store the data in storage
 npm run prisma-migrate
+
+# If you want to store it in memory
+npm run prisma-push
 ```
 
 ### 4. Run the Development Server
